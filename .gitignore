@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Database (contains real tenant data - don't commit)
+database/rent.db
+database/*.db-journal
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files created by the app
+_restore_tmp.db

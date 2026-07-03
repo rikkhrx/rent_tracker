@@ -1,0 +1,19 @@
+streamlit>=1.32.0
+pandas>=2.2.0
+plotly>=5.18.0
+openpyxl>=3.1.0
+reportlab>=4.0.0
+python-dateutil>=2.8.2
+bcrypt>=4.1.0
+streamlit-option-menu>=0.3.12
+streamlit-extras>=0.4.0
+
+# Optional: Desktop notifications (Windows/Linux/Mac desktop only - will NOT work
+# on a server/cloud deployment such as Streamlit Community Cloud). The app
+# degrades gracefully with in-app notifications if these are unavailable.
+plyer>=2.1.0
+
+# Optional: Automated WhatsApp sending via browser automation (requires a local
+# desktop with a GUI and a logged-in WhatsApp Web session). The app's primary
+# WhatsApp feature uses wa.me links which work everywhere without this library.
+pywhatkit>=5.4
