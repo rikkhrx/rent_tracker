@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Rent Tracker - shared styling
+   Provides: card components, status badges, and responsive tweaks so the
+   app looks good on phones, tablets and desktop. Streamlit's own column
+   system already stacks columns vertically on narrow viewports; the rules
+   below fine-tune spacing/font-size at common breakpoints on top of that.
+   ========================================================================== */
+
+/* Tighter overall padding so more content fits above the fold on phones */
+.block-container {
+    padding-top: 1.2rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 1200px;
+}
+
+/* ---- Metric / dashboard cards -------------------------------------- */
+.rt-card {
+    border-radius: 14px;
+    padding: 18px 16px;
+    color: white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.rt-card .rt-card-label {
+    font-size: 0.82rem;
+    opacity: 0.9;
+    margin-bottom: 6px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.rt-card .rt-card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.rt-card.purple  { background: linear-gradient(135deg, #7F6CF0, #5B4FE8); }
+.rt-card.green   { background: linear-gradient(135deg, #2ECC71, #1BAA57); }
+.rt-card.blue    { background: linear-gradient(135deg, #4FA8FF, #2E7FE0); }
+.rt-card.orange  { background: linear-gradient(135deg, #FFA754, #F5820C); }
+.rt-card.red     { background: linear-gradient(135deg, #FF6B6B, #E74C3C); }
+.rt-card.teal    { background: linear-gradient(135deg, #26C6DA, #159AAE); }
+
+/* ---- Status badges ---------------------------------------------------- */
+.rt-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+.rt-badge-paid     { background: #DFF6E4; color: #1B8A3B; }
+.rt-badge-pending  { background: #FFF4D6; color: #9A6B00; }
+.rt-badge-overdue  { background: #FDE0E0; color: #C0392B; }
+.rt-badge-due      { background: #FFE7CC; color: #C2650A; }
+
+/* ---- Tenant card wrapper ------------------------------------------- */
+.rt-tenant-header {
+    font-weight: 600;
+    font-size: 1.02rem;
+}
+.rt-tenant-sub {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+/* ---- Notification banner -------------------------------------------- */
+.rt-notify {
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+}
+
+/* ---- Login card -------------------------------------------------------- */
+.rt-login-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.rt-login-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 1.6rem;
+    font-size: 0.95rem;
+}
+
+/* ---- Responsive breakpoints ------------------------------------------ */
+@media (max-width: 640px) {
+    .rt-card { min-height: 90px; padding: 14px 12px; }
+    .rt-card .rt-card-value { font-size: 1.3rem; }
+    .rt-login-title { font-size: 1.5rem; }
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    h3 { font-size: 1.05rem !important; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .rt-card .rt-card-value { font-size: 1.45rem; }
+}
